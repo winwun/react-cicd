@@ -3,9 +3,12 @@ jobs:
   build:
     working_directory: ~/mern-starter
     docker:
-      - image: weltn24/eb-deployer:latest
+      - image: seekintgdp/circleci-node-eb-deployer:sonic-latest
     steps:
       - checkout
+      - run:
+          name: Start Mongo DB
+          command: service mongod start
       - run:
           name: Install Dependencies
           command: npm install
