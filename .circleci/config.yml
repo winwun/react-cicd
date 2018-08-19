@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/mern-starter
     docker:
-      - image: weltn24/eb-deployer:testv1
+      - image: weltn24/eb-deployer:latest
     steps:
       - checkout
       - run:
